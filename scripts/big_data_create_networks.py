@@ -1,5 +1,11 @@
 #! /usr/bin/python
 
+##################################################################
+#                                                                #
+# This script creates 100 neutron networks for big data use case #
+#                                                                #
+##################################################################
+
 import os
 from multiprocessing import Pool
 from neutronclient.v2_0 import client as neutron_client
@@ -28,9 +34,11 @@ def t_create_network(i):
 
 pool = Pool(processes=10)
 
+os.system("neutron quota-update --network 105")
+
 for i in range(1,101):
     pool.apply_async(t_create_network, (i, ))
 
 pool.close()
 pool.join()
-print "****** DONE!! ******"
+print "\n****** DONE!! ******\n"

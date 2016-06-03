@@ -1,4 +1,46 @@
 curl -s -X POST http://10.0.2.15:5000/v2.0/tokens   -H "Content-Type: application/json"   -d '{"auth": {"tenantName": "'"$OS_TENANT_NAME"'", "passwordCredentials": {"username": "'"$OS_USERNAME"'", "password": "'"$OS_PASSWORD"'"}}}'   | python -m json.tool
+
+TOKEN_ID=50b3c2e27f034224a26b5f808f93b822
+
+curl -s —i http://10.0.2.15:9696/v2.0/networks.json -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool | grep name
+
+curl -s —i http://10.0.2.15:9696/v2.0/networks.json -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool | grep name | wc -l
+
+Get first 10 networks:
+----------------------
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool | grep name
+
+Get next 10 networks:
+---------------------
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10&marker=195260f1-bd40-4200-9153-f20dee01a0e4" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10&marker=195260f1-bd40-4200-9153-f20dee01a0e4" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool | grep name
+
+Get next 10 networks:
+---------------------
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10&marker=280c4472-b30f-44b2-bcf0-698273ea3b19" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10&marker=280c4472-b30f-44b2-bcf0-698273ea3b19" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool | grep name
+
+Get next 10 networks:
+---------------------
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10&marker=325e5cdd-44d0-480a-b11d-8cbf77886f21" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool
+
+curl -s —i "http://10.0.2.15:9696/v2.0/networks.json?limit=10&marker=325e5cdd-44d0-480a-b11d-8cbf77886f21" -X GET -H "X-Auth-Token:$TOKEN_ID" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient" | python -m json.tool | grep name
+
+
+========
+Outputs:
+========
+
+
+curl -s -X POST http://10.0.2.15:5000/v2.0/tokens   -H "Content-Type: application/json"   -d '{"auth": {"tenantName": "'"$OS_TENANT_NAME"'", "passwordCredentials": {"username": "'"$OS_USERNAME"'", "password": "'"$OS_PASSWORD"'"}}}'   | python -m json.tool
 {
     "access": {
         "metadata": {
