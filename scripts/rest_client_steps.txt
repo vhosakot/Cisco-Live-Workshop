@@ -1,0 +1,45 @@
+./Cisco-Live-Workshop/scripts/rest_server.py
+
+Open another shell and run the following CURL commands:
+
+GET:
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+POST:
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"event":"New Event1", "city":"Some City1"}' http://127.0.100.100:9876/api/v1.0/responses
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"event":"New Event2", "city":"Some City2"}' http://127.0.100.100:9876/api/v1.0/responses
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+PUT:
+
+curl -i -H "Content-Type: application/json" -X PUT -d '{"event":"New EventA", "city":"Some CityA"}' http://127.0.100.100:9876/api/v1.0/responses/2
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+curl -i -H "Content-Type: application/json" -X PUT -d '{"event":"New EventB", "city":"Some CityB"}' http://127.0.100.100:9876/api/v1.0/responses/3
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+DELETE:
+
+curl -i -X DELETE http://127.0.100.100:9876/api/v1.0/responses/3
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+curl -i -X DELETE http://127.0.100.100:9876/api/v1.0/responses/2
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+curl -i -X DELETE http://127.0.100.100:9876/api/v1.0/responses/1
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses
+
+ERROR:
+
+curl -i http://127.0.100.100:9876/api/v1.0/responses/2
