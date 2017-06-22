@@ -5,21 +5,21 @@ Best REST in OpenStack - workshop steps
    (green right arrow at the top). Wait a minute for the VM to boot.
 
 2. After the VM boots and the login prompt is seen, SSH into the VM. Password
-   is ciscolive
+   is ``ciscolive``.
 
 ::
 
-      ssh stack@192.168.20.3
-      stack@192.168.20.3's password: ciscolive
+          ssh stack@192.168.20.3
+          stack@192.168.20.3's password: ciscolive
 
 
 3. Deploy OpenStack Ocata.  It takes about 13 minutes.
 
 ::
 
-      cd devstack
-      ./stack.sh
+          cd devstack
+          ./stack.sh
 
 
 4. After ``stack.sh`` ends, the OpenStack Horizon GUI can be accessed in a
-   browser at http://192.168.20.3. Username is admin and password is password
+   browser at http://192.168.20.3. Username is ``admin`` and password is ``password``.
