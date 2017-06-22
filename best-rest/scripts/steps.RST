@@ -158,4 +158,4 @@ Best REST in OpenStack - workshop steps
 
 22. The script ``api_setup.py`` is at https://github.com/vhosakot/Cisco-Live-Workshop/blob/master/best-rest/scripts/api_setup.py.
 
-23. The presentation slides of this workshop are at .
+23. The presentation slides of this workshop are at https://cisco.box.com/s/ut0vj4jer6hs3s1834qhdgmbv27u6cdf.
