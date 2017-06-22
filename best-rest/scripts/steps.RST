@@ -23,3 +23,6 @@ Best REST in OpenStack - workshop steps
 
 4. After ``stack.sh`` ends, the OpenStack Horizon GUI can be accessed in a
    browser at http://192.168.20.3. Username is ``admin`` and password is ``password``.
+
+5. In the OpenStack GUI, select the ``demo`` project at the top left (next to the
+   OpenStack logo). Also, click on ``Project --> Networks --> Network Topology --> Graph``.
