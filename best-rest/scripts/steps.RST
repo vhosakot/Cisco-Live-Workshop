@@ -75,5 +75,19 @@ Best REST in OpenStack - workshop steps
 
       api.create_router(prefix)
 
-  
-13.
+
+13. Setup router (add router gateway and router interface), check the OpenStack GUI.
+
+::
+
+      api.setup_router(prefix)
+
+
+14. Boot an OpenStack nova virtual machine, check the OpenStack GUI, analyze HTTP packet.
+
+::
+
+      api.boot_vm(prefix)
+
+
+15. 
