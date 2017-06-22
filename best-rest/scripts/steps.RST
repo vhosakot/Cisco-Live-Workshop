@@ -90,4 +90,26 @@ Best REST in OpenStack - workshop steps
       api.boot_vm(prefix)
 
 
-15. 
+15. Open another terminal on the laptop and SSH into the ``devstack-api`` VM (password is ``ciscolive``). Copy the command in the output of step **14** above, paste it in the terminal to SSH into the OpenStack nova virtual machine. Check internet connectivity inside the nova virtual machine.
+
+::
+
+      ssh stack@192.168.20.3
+      stack@192.168.20.3's password: ciscolive
+
+      sudo ip netns exec qdhcp-c5fc33de-1ab9-4003-a860-c0a24ab03122 ssh cirros@30.30.0.3
+
+      Type yes.
+
+      password is cubswin:)
+
+      ip a
+
+      ping -c 5 www.google.com
+
+      ping -c 5 www.cisco.com
+
+      exit
+
+
+16. Delete the nova virtual machine, check the OpenStack GUI, analyze HTTP packet.
