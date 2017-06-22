@@ -55,4 +55,25 @@ Best REST in OpenStack - workshop steps
       prefix = "<first name or last name>"
 
 
-10. Create an OpenStack neutron network.
+10. Create an OpenStack neutron network, check the OpenStack GUI, analyze HTTP packet.
+
+::
+
+      api.create_network(prefix)
+
+
+11. Create an OpenStack neutron subnet, check the OpenStack GUI, analyze HTTP packet.
+
+::
+
+      api.create_subnet(prefix)
+
+
+12. Create an OpenStack neutron router, check the OpenStack GUI, analyze HTTP packet.
+
+::
+
+      api.create_router(prefix)
+
+  
+13.
