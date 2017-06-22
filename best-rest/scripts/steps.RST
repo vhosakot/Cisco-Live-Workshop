@@ -25,4 +25,5 @@ Best REST in OpenStack - workshop steps
    browser at http://192.168.20.3. Username is ``admin`` and password is ``password``.
 
 5. In the OpenStack GUI, select the ``demo`` project at the top left (next to the
-   OpenStack logo). Also, click on ``Project --> Networks --> Network Topology --> Graph``.
+   OpenStack logo).
+   Also, click on ``Project --> Network --> Network Topology --> Graph``.
