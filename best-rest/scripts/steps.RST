@@ -1,7 +1,7 @@
 Best REST in OpenStack - workshop steps
 =======================================
 
-1. Select the VM ``devstack-api`` in VirtualBox and press the "Start" button
+1. Select the VM ``devstack-api`` in VirtualBox and press the "**Start**" button
    (green right arrow at the top). Wait a minute for the VM to boot.
 
 2. After the VM boots and the login prompt is seen, open a terminal on the laptop,
