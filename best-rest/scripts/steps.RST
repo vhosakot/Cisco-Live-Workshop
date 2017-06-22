@@ -27,7 +27,7 @@ Best REST in OpenStack - workshop steps
 5. In the OpenStack GUI, select the ``demo`` project at the top left (next to the
    OpenStack logo). On the left pane, click on ``Project --> Network --> Network Topology`` and click on the ``Graph`` tab.
 
-6. Source the environment variables needed for OpenStack. Ignore the warning.
+6. In the terminal, source the environment variables needed for OpenStack. Ignore the warning.
 
 ::
 
