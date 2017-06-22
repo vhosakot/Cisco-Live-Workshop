@@ -90,7 +90,7 @@ Best REST in OpenStack - workshop steps
       api.boot_vm(prefix)
 
 
-15. Open another terminal on the laptop and SSH into the ``devstack-api`` VM (password is ``ciscolive``). Copy the command in the output of step **14** above, paste it in the terminal to SSH into the OpenStack nova virtual machine. Check internet connectivity inside the nova virtual machine.
+15. Open another terminal on the laptop and SSH into the ``devstack-api`` VM (password is ``ciscolive``). Copy the command in the output of step **14** above, paste it in this terminal to SSH into the OpenStack nova virtual machine. Check internet connectivity inside the nova virtual machine.
 
 ::
 
@@ -99,7 +99,7 @@ Best REST in OpenStack - workshop steps
 
       sudo ip netns exec qdhcp-c5fc33de-1ab9-4003-a860-c0a24ab03122 ssh cirros@30.30.0.3
 
-      Type yes.
+      Type yes
 
       password is cubswin:)
 
@@ -111,5 +111,51 @@ Best REST in OpenStack - workshop steps
 
       exit
 
+      exit
 
-16. Delete the nova virtual machine, check the OpenStack GUI, analyze HTTP packet.
+
+16. Back in the first terminal, delete the nova virtual machine, check the OpenStack GUI, analyze HTTP packet.
+
+::
+
+      api.delete_vm(prefix)
+
+
+17. Delete the neutron router, check the OpenStack GUI, analyze HTTP packet.
+
+::
+
+      api.delete_router(prefix)
+
+
+18. Delete the neutron subnet, check the OpenStack GUI, analyze HTTP packet. 
+
+::
+
+      api.delete_subnet(prefix)
+
+
+19. Delete neutron network, check the OpenStack GUI, analyze HTTP packet.
+
+::
+
+      api.delete_network(prefix)
+
+
+20. Create 8 networks, 8 subnets, 8 routers. This takes about 2 minutes to finish. Check the OpenStack GUI.
+
+::
+
+      api.create_many(prefix)
+
+
+21. Delete 8 networks, 8 subnets, 8 routers. This takes about 2 minutes to finish. Check the OpenStack GUI.
+
+::
+
+      api.delete_many(prefix)
+
+
+22. The script ``api_setup.py`` is at https://github.com/vhosakot/Cisco-Live-Workshop/blob/master/best-rest/scripts/api_setup.py.
+
+23. The presentation slides of this workshop are at .
