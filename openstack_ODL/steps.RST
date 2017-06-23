@@ -27,6 +27,18 @@ OpenStack with OpenDaylight - workshop steps
 5. In the OpenStack GUI, select the ``demo`` project at the top left (next to the
    OpenStack logo). On the left pane, click on ``Project --> Network --> Network Topology`` and click on the ``Graph`` tab.
 
-6. The OpenDaylight DLUX GUI can be accessed at http://192.168.10.3:8181/index.html (username is ``admin``, password is ``admin``).
+6. Close the OpenStack GUI.
 
-7. In the terminal,
+7. The OpenDaylight DLUX GUI can be accessed at http://192.168.10.3:8181/index.html (username is ``admin``, password is ``admin``).
+
+8. In the OpenDaylight GUI, click on each of the following on the left pane:
+
+-  Yang Visualizer (select different ``Model`` at the top)
+-  Topology
+-  Network Virtualization --> 2D View
+-  Nodes --> Node connectors --> 2
+-  Yang UI
+
+9. Close the OpenDaylight GUI.
+
+10. In the terminal,
