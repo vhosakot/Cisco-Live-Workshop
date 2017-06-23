@@ -159,4 +159,4 @@ OpenStack with OpenDaylight - workshop steps
       sudo ovs-ofctl -O OpenFlow13 dump-flows br-int
 
 
-27. The presentation slides of this workshop are at .
+27. The presentation slides of this workshop are at https://cisco.box.com/s/7ypfrhnb1aic1gotbzzrsaf3a96s7gs1.
