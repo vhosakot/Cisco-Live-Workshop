@@ -92,16 +92,13 @@ OpenStack with OpenDaylight - workshop steps
       neutron agent-list
 
 
-17. Check if the ml2 OpenDaylight endpoint can accessed using ``curl``.
+17. Check if the following ml2 OpenDaylight endpoints can accessed in a browser (username is ``admin``, password is ``admin``).
 
-::
+-  http://192.168.10.3:8087/restconf/config/neutron:neutron?prettyPrint=true
 
-      http://192.168.10.3:8087/restconf/config/neutron:neutron?prettyPrint=true
+-  http://192.168.10.3:8087/restconf/operational/network-topology:network-topology
 
-      http://192.168.10.3:8087/restconf/operational/network-topology:network-topology
-
-      http://192.168.10.3:8087/controller/nb/v2/neutron/routers
-
+-  http://192.168.10.3:8087/controller/nb/v2/neutron/routers
 
 18. Enter the OpenDaylight Karaf client shell.
 
