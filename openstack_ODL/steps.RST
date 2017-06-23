@@ -77,4 +77,72 @@ OpenStack with OpenDaylight - workshop steps
       grep -i 'opend\|odl\|8087' /etc/neutron/plugins/ml2/ml2_conf.ini 
 
 
-15. 
+15. Check if neutron-server is using the right configuration files that have the OpenDaylight settings.
+
+::
+
+      ps aux | grep ml2
+
+
+16. Check if all the neutron agents are running correctly.
+
+::
+
+      source accrc/admin/admin
+      neutron agent-list
+
+
+17. Check if the ml2 OpenDaylight endpoint can accessed using ``curl``.
+
+::
+
+      http://192.168.10.3:8087/restconf/config/neutron:neutron?prettyPrint=true
+
+      http://192.168.10.3:8087/restconf/operational/network-topology:network-topology
+
+      http://192.168.10.3:8087/controller/nb/v2/neutron/routers
+
+
+18. Enter the OpenDaylight Karaf client shell.
+
+::
+
+      /opt/stack/opendaylight/distribution-karaf-0.7.0-SNAPSHOT/bin/client 
+
+
+19. In the OpenDaylight Karaf client shell, check if the OpenStack neutron features are installed.
+
+::
+
+      feature:list -i | grep -i neutron
+
+
+20. Check if the Open vSwitch features are installed.
+
+::
+
+      feature:list -i | grep -i ovs
+
+
+21. Check if the netvirt OpenStack features in installed.
+
+::
+
+      feature:list -i | grep -i openstack
+
+
+22. Check ODL OpenFlow statistics and session statistics.
+
+::
+
+      ofp:showstats
+
+
+23. Check the ODL web end points.
+
+::
+
+      web:list
+
+
+24. 
