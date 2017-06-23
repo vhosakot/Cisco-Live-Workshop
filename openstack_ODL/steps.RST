@@ -41,4 +41,40 @@ OpenStack with OpenDaylight - workshop steps
 
 9. Close the OpenDaylight GUI.
 
-10. In the terminal,
+10. In the terminal, check if Open vSwitch (virtual layer-2 switch) is listening on TCP ports ``6640`` and ``6653``.
+
+::
+
+      sudo ovs-vsctl show
+      sudo ovs-vsctl show | grep '6640\|6653'
+
+
+11. Check if the ``opendaylight`` process is running.
+
+::
+
+      ps aux | grep opendaylight
+
+
+12. Check the OVS configuration and interface mapping.
+
+::
+
+      sudo ovs-vsctl get Open_vSwitch . other_config
+
+
+13. Check if OpenDaylight is the service plugin in neutron's configuration file ``/etc/neutron/neutron.conf``.
+
+::
+
+      grep -i odl /etc/neutron/neutron.conf
+
+
+14. Check if neutron's ml2 configuration file ``/etc/neutron/plugins/ml2/ml2_conf.ini`` has OpenDaylight settings.
+
+::
+
+      grep -i 'opend\|odl\|8087' /etc/neutron/plugins/ml2/ml2_conf.ini 
+
+
+15. 
