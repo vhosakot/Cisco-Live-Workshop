@@ -145,4 +145,21 @@ OpenStack with OpenDaylight - workshop steps
       web:list
 
 
-24. 
+24. Check if the ODL configurations have the right settings needed for OpenStack neutron.
+
+::
+
+      config:list  | grep -i neutron
+      config:list  | grep -i openstack
+
+
+25. Hit ``CTRL+d`` and exit the OpenDaylight Karaf client shell.
+
+26. Check the OpenFlow 1.3 table in the OVS bridge ``br-int``.
+
+::
+
+      sudo ovs-ofctl -O OpenFlow13 dump-flows br-int
+
+
+27. The presentation slides of this workshop are at .
