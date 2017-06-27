@@ -52,7 +52,7 @@ Best REST in OpenStack - workshop steps
 ::
 
       prefix = "<first name or last name>"
-      Example: prefix="John"
+      Example: prefix = "John"
 
 
 10. Create an OpenStack neutron network, check the OpenStack GUI, analyze HTTP packet.
