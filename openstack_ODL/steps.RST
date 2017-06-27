@@ -10,7 +10,6 @@ OpenStack with OpenDaylight - workshop steps
 ::
 
       ssh stack@192.168.10.3
-      stack@192.168.10.3's password: ciscolive
 
 
 3. Deploy OpenStack Ocata with OpenDaylight Boron. It takes about 13 minutes.

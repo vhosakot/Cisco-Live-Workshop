@@ -10,7 +10,6 @@ Best REST in OpenStack - workshop steps
 ::
 
       ssh stack@192.168.20.3
-      stack@192.168.20.3's password: ciscolive
 
 
 3. Deploy OpenStack Ocata.  It takes about 13 minutes.
@@ -53,6 +52,7 @@ Best REST in OpenStack - workshop steps
 ::
 
       prefix = "<first name or last name>"
+      Example: prefix="John"
 
 
 10. Create an OpenStack neutron network, check the OpenStack GUI, analyze HTTP packet.
@@ -95,9 +95,8 @@ Best REST in OpenStack - workshop steps
 ::
 
       ssh stack@192.168.20.3
-      stack@192.168.20.3's password: ciscolive
 
-      sudo ip netns exec qdhcp-c5fc33de-1ab9-4003-a860-c0a24ab03122 ssh cirros@30.30.0.3
+      sudo ip netns exec <ID seen in the output of step 14 above> ssh cirros@<IP address seen in the output of step 14 above>
 
       Type yes
 
