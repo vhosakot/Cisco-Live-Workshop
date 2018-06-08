@@ -10,7 +10,6 @@ Best REST in OpenStack - workshop steps
 ::
 
       ssh stack@192.168.20.3
-      stack@192.168.20.3's password: ciscolive
 
 
 3. Deploy OpenStack Ocata.  It takes about 13 minutes.
@@ -27,7 +26,7 @@ Best REST in OpenStack - workshop steps
 5. In the OpenStack GUI, select the ``demo`` project at the top left (next to the
    OpenStack logo). On the left pane, click on ``Project --> Network --> Network Topology`` and click on the ``Graph`` tab.
 
-6. Source the environment variables needed for OpenStack. Ignore the warning.
+6. In the terminal, source the environment variables needed for OpenStack. Ignore the warning.
 
 ::
 
@@ -53,6 +52,7 @@ Best REST in OpenStack - workshop steps
 ::
 
       prefix = "<first name or last name>"
+      Example: prefix = "John"
 
 
 10. Create an OpenStack neutron network, check the OpenStack GUI, analyze HTTP packet.
@@ -95,9 +95,8 @@ Best REST in OpenStack - workshop steps
 ::
 
       ssh stack@192.168.20.3
-      stack@192.168.20.3's password: ciscolive
 
-      sudo ip netns exec qdhcp-c5fc33de-1ab9-4003-a860-c0a24ab03122 ssh cirros@30.30.0.3
+      sudo ip netns exec <ID seen in the output of step 14 above> ssh cirros@<IP address seen in the output of step 14 above>
 
       Type yes
 
@@ -158,4 +157,4 @@ Best REST in OpenStack - workshop steps
 
 22. The script ``api_setup.py`` is at https://github.com/vhosakot/Cisco-Live-Workshop/blob/master/best-rest/scripts/api_setup.py.
 
-23. The presentation slides of this workshop are at .
+23. The presentation slides of this workshop are at https://cisco.box.com/s/ut0vj4jer6hs3s1834qhdgmbv27u6cdf.
